@@ -161,6 +161,7 @@ def validate(model,x,y,rs,nfolds=5):
     print("The accuracy to the real sparisty pattern is: " + str(np.mean(acc)))
 ```
 and the results are as follows:
+
   | Models      | Validations |
   | ----------- | ----------- |
   | Lasso       | The Root Mean Squared Error is: 4.090661139244214|
