@@ -161,27 +161,27 @@ def validate(model,x,y,rs,nfolds=5):
     print("The accuracy to the real sparisty pattern is: " + str(np.mean(acc)))
 ```
 and the results are as follows:
- | Models      | Validations |
- | ----------- | ----------- |
- | Lasso       | The Root Mean Squared Error is: 4.090661139244214 |
- |             | The L2 distance to the real coefficients is: 3.5358850321178443 |
- |             | The accuracy to the real sparisty pattern is: 0.7555555555555555 |
- |             | |
- | Ridge       | The Root Mean Squared Error is: 6.276818151515922|
- |             | The L2 distance to the real coefficients is: 3.046021042560226|
- |             | The accuracy to the real sparisty pattern is: 1.0|
- |             | |
- | Elastic Net | The Root Mean Squared Error is: 4.411117331604949|
- |             | The L2 distance to the real coefficients is: 3.566104361846014|
- |             | The accuracy to the real sparisty pattern is: 0.8666666666666668|
- |             | |
- | SCAD        | The Root Mean Squared Error is: 7.267522760527325|
- |             | The L2 distance to the real coefficients is: 3.0505892470293468|
- |             | |
- |             | The accuracy to the real sparisty pattern is: 1.0|
- | SQRTLasso   | The Root Mean Squared Error is: 3.8585317937777077|
- |             | The L2 distance to the real coefficients is: 1.3930172410723514|
- |             | The accuracy to the real sparisty pattern is: 1.0|
+  | Models      | Validations |
+  | ----------- | ----------- |
+  | Lasso       | The Root Mean Squared Error is: 4.090661139244214|
+  |             | The L2 distance to the real coefficients is: 3.5358850321178443|
+  |             | The accuracy to the real sparisty pattern is: 0.755555555555555|
+  |             | |
+  | Ridge       | The Root Mean Squared Error is: 6.276818151515922|
+  |             | The L2 distance to the real coefficients is: 3.046021042560226|
+  |             | The accuracy to the real sparisty pattern is: 1.0|
+  |             | |
+  | Elastic Net | The Root Mean Squared Error is: 4.411117331604949|
+  |             | The L2 distance to the real coefficients is: 3.566104361846014|
+  |             | The accuracy to the real sparisty pattern is: 0.8666666666666668|
+  |             | |
+  | SCAD        | The Root Mean Squared Error is: 7.267522760527325|
+  |             | The L2 distance to the real coefficients is: 3.0505892470293468|
+  |             | The accuracy to the real sparisty pattern is: 1.0|
+  |             | |
+  | SQRTLasso   | The Root Mean Squared Error is: 3.8585317937777077|
+  |             | The L2 distance to the real coefficients is: 1.3930172410723514|
+  |             | The accuracy to the real sparisty pattern is: 1.0|
  
  If we compare the models to each other, SQRTLasso has a significantly lower L2 distance, but a slightly lower root mean squared error compared to Lasso. One note I would like to make is that the "accuracy" of the sparsity pattern isn't really an accuracy. This merely measures how many values are the same in both sparsity patterns. One example is the Ridge model. Looking at the sparsity pattern returns every single feature, which is 1200 of them. So, the Ridge did get all of the correct positions for the real sparsity pattern but that is because it has all of the positions. 
  
