@@ -86,3 +86,26 @@ Once again, importing BaseEstimator and RegressorMixin is very important to maki
 
 ## Simulation
 
+To simulate our datasets, we will make use of the numpy library and some lists. 
+
+```
+n = 200
+p = 1200
+beta_star = np.concatenate(([1]*7,[0]*25,[.25]*5,[0]*50,[.7]*15,[0]*1098))
+
+v = [] #to be used for toeplitz()
+for i in range(p):
+    v.append(0.8**i)
+```
+According to the project guidelines, each dataset will have 1200 features (*p* = 1200), 200 observations (*n* = 200), coefficients of a specific order, and a toeplitz correlation structure. Now let's generate some random samples
+```
+mu = [0]*p
+sigma = 3.5
+np.random.seed(123)
+x = np.random.multivariate_normal(mu, toeplitz(v), size=n)
+y = np.matmul(x,beta_star).reshape(-1,1) + sigma*np.random.normal(0,1,size=(n,1))
+```
+Now that we are able to generate data, we can apply some methods on them.
+
+## Application
+
