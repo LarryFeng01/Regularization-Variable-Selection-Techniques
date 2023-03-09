@@ -1,4 +1,4 @@
-# Project 5: Comparison of Different Regularization and Variable Selection Techniques
+Comparison of Different Regularization and Variable Selection Techniques
 ### By Larry Feng
 
 ## Introduction
